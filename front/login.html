@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>AppFounder</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <p style="text-align:center;color:#F51752;">{{msgErro}}</p>
+    <ion-input [(ngModel)]="user" ng-control="user" type="text" placeholder="Usuario"></ion-input>
+    <ion-input [(ngModel)]="password" ng-control="password" type="password" placeholder="Senha"></ion-input>
+    <div class="spacer" style="height: 40px;"></div>
+    <button id="btnLogin" style="text-transform: none" (click)="logar()" ion-button stable block>Login</button>
+    <button id="btnSigup" style="text-transform: none" (click)="novoUsuario()" ion-button clear block>É novo aqui? Crie sua conta</button>
+</ion-content>
