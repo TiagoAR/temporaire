@@ -43,7 +43,7 @@ class UsuarioControle{
     	return $retorno;
     }
     
-    static function logar_via_token($con, $usuario, $device_id, $usuario_id, $senha_renovacao) {
+    static function login_via_token($con, $usuario, $device_id, $usuario_id, $senha_renovacao) {
     	include_once '../includes/php-jwt/vendor/autoload.php';
     	
     	$token = array(

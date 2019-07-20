@@ -22,7 +22,7 @@ export class ServicoAutenticacao {
 
 	login(resposta:Function, usuario:string, senha:string) {
 		let body = {
-	    				"acao" : "logar",
+	    				"acao" : "login",
 	    				"usuario" : usuario,
 	    				"senha" : senha,
 	    				"device_id" : AppConfig.DEVICE_ID

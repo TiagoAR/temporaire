@@ -20,7 +20,7 @@ export class Login {
   constructor(public navCtrl: NavController, public navParams: NavParams, public servicoAutenticacao: ServicoAutenticacao, public servicoMensagem: ServicoMensagem) {
   }
 
-  logar() {
+  login() {
     this.servicoAutenticacao.login( (resposta) => {
       if (resposta === true) {
         this.servicoMensagem.iniciarChat();

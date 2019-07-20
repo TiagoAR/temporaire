@@ -56,7 +56,7 @@
 			break;
 
 
-		case 'logar':
+		case 'login':
 			$retorno = array();
 
 			$usuario = $POST_PARAMS['usuario'];
@@ -80,7 +80,7 @@
 				$senha_renovacao = UsuarioControle::geraSenha();
 				
 				if ( $nreg > 0  && $con->result($query,0,'senha') == $senha) { 
-					$jwt = UsuarioControle::logar_via_token($con, $usuario, $device_id, $usuario_id, $senha_renovacao);
+					$jwt = UsuarioControle::login_via_token($con, $usuario, $device_id, $usuario_id, $senha_renovacao);
 					echo '{ "situacao" : "ok",' . '"token" : "'.$jwt.'", "senha_renovacao" : "'.$senha_renovacao.'", "usuario_id" : "'.$usuario_id.'", "usuario" : "'.$usuario.'"}';
 				} else {
 					echo '{ "situacao" : "erro",' . '"mensagem" : "Usuário ou senha incorreto"}';
